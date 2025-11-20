@@ -1,0 +1,16 @@
+[database]
+address = "database address"
+username = "username"
+password = "password"
+database = "db name"
+
+[logto.client]
+endpoint = "https://enpoint.logto"
+appId = "appid"
+appSecret = "appsecret"
+
+[bupt.elec]  # For room list initializing
+area = [
+    { id = 1, name = "西土城"},
+    { id = 2, name = "沙河"}
+]
