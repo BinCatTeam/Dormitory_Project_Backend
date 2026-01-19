@@ -1,7 +1,6 @@
 # Latested verified effective at 10/27/2025
 
 from buptmw import BUPT_Auth
-from elec.db import db, ElecBuilding
 from tomllib import load
 from flask import Flask
 from time import sleep
@@ -11,8 +10,11 @@ from random import random
 import os
 
 
+from elec.db import db, ElecBuilding
+
+
 # runtime configuration
-os.chdir(os.path.dirname(__file__))
+os.chdir(os.path.join(os.path.dirname(__file__), '..'))
 with open("./config.toml", "rb") as file:
     config = load(file)
 
@@ -28,11 +30,10 @@ with app.app_context():
         "username": 1234121234,
         "password": 'pswd'
     }
-    db.create_all()
     bupt = BUPT_Auth(config["bupt"]["account"])
 
     # elec
-    elec = bupt.get_Elec()
+    elec = bupt.get_Electric()
     area = config["bupt"]["elec"]["area"]
 
     part = []

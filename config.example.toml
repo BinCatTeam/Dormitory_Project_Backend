@@ -4,10 +4,26 @@ username = "username"
 password = "password"
 database = "db name"
 
-[logto.client]
-endpoint = "https://enpoint.logto"
-appId = "appid"
-appSecret = "appsecret"
+[database.migrate]
+address = "database address"
+username = "username"
+password = "password"
+database = "db name"
+
+[logto.app]
+appId = "appId"
+appSecret = "appSecret"
+
+[logto.api]
+management = "https://default.logto.app/api"
+dormitory = 'https://www.yourdomain.com/api'
+
+[logto.endpoint]
+issuer = 'https://auth.yourdomain.com/oidc'
+jwksuri = 'https://auth.yourdomain.com/oidc/jwks'
+token = "https://auth.yourdomain.com/oidc/token"
+user = "https://auth.yourdomain.com/api/users"
+organization = "https://auth.yourdomain.com/api/organizations"
 
 [bupt.elec]  # For room list initializing
 area = [
